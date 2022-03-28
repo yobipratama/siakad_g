@@ -32,6 +32,18 @@
  <input type="text" name="Nama" class="form-control" id="Nama" value="{{ $Mahasiswa->nama }}" aria-describedby="Nama" >
  </div>
  <div class="form-group">
+ <label for="Email">Email</label>
+ <input type="text" name="Email" class="form-control" id="Email" value="{{ $Mahasiswa->email }}" aria-describedby="Email" >
+ </div>
+ <div class="form-group">
+ <label for="Tanggal Lahir">Tanggal Lahir</label>
+ <input type="text" name="Tanggal Lahir" class="form-control" id="Tanggal Lahir" value="{{ $Mahasiswa->tgl_lahir }}" aria-describedby="Tanggal Lahir" >
+ </div>
+ <div class="form-group">
+ <label for="Alamat">Alamat</label>
+ <input type="text" name="Alamat" class="form-control" id="Alamat" value="{{ $Mahasiswa->alamat }}" aria-describedby="Alamat" >
+ </div>
+ <div class="form-group">
  <label for="Kelas">Kelas</label>
  <input type="Kelas" name="Kelas" class="form-control" id="Kelas" value="{{ $Mahasiswa->kelas }}" aria-describedby="Kelas" >
  </div>

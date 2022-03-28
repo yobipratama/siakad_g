@@ -31,6 +31,18 @@
  <input type="Nama" name="Nama" class="form-control" id="Nama" ariadescribedby="Nama" >
  </div>
  <div class="form-group">
+ <label for="Email">Email</label>
+ <input type="Email" name="Email" class="form-control" id="Email" ariadescribedby="Email" >
+ </div>
+ <div class="form-group">
+ <label for="Tanggal Lahir">Tanggal Lahir</label>
+ <input type="Tanggal Lahir" name="Tanggal Lahir" class="form-control" id="Tanggal Lahir" ariadescribedby="password" >
+ </div>
+ <div class="form-group">
+ <label for="Alamat">Alamat</label>
+ <input type="Alamat" name="Alamat" class="form-control" id="Alamat" ariadescribedby="Alamat" >
+ </div>
+ <div class="form-group">
  <label for="Kelas">Kelas</label>
  <input type="Kelas" name="Kelas" class="form-control" id="Kelas" ariadescribedby="password" >
  </div>
