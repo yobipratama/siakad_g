@@ -1,10 +1,10 @@
 @extends('mahasiswa.layout')
 
 @section('content')
- <div class="row">
- <div class="col-lg-12 margin-tb">
- <div class="pull-left mt-2">
- <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
+<div class="row">
+    <div class="col-lg-12 margin-tb">
+        <div class="pull-left mt-2">
+        <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
  </div>
  <div class="float-right my-2">
  <form action="{{ url()->current() }}"
@@ -13,7 +13,7 @@
     <input type="search"
       name="keyword"
       value="{{ request('keyword') }}"
-      placeholder="Search ....."
+      placeholder="Cari Nama"
       class="block w-full pl-4 pr-10 text-sm leading-5 transition rounded-full shadow-sm border-secondary-300 bg-secondary-50 focus:bg-white focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
     <button type="submit"
       class="absolute top-0 right-0 inline-flex items-center px-2 py-2 ml-1 mr-2 text-sm focus:outline-none">
@@ -33,6 +33,7 @@
  </div>
  </div>
 
+
  @if ($message = Session::get('success'))
  <div class="alert alert-success">
  <p>{{ $message }}</p>
@@ -48,21 +49,16 @@
  <tr>
  <th>Nim</th>
  <th>Nama</th>
- <th>Email</th>
- <th>Tanggal Lahir</th>
- <th>Alamat</th>
  <th>Kelas</th>
  <th>Jurusan</th>
  <th width="280px">Action</th>
  </tr>
  @foreach ($mahasiswa as $mhs)
  <tr>
+
  <td>{{ $mhs ->nim }}</td>
  <td>{{ $mhs ->nama }}</td>
- <td>{{ $mhs ->email }}</td>
- <td>{{ $mhs ->tgl_lahir }}</td>
- <td>{{ $mhs ->alamat }}</td>
- <td>{{ $mhs ->kelas }}</td>
+ <td>{{ $mhs ->kelas->nama_kelas }}</td>
  <td>{{ $mhs ->jurusan }}</td>
  <td>
  <form action="{{ route('mahasiswa.destroy',['mahasiswa'=>$mhs->nim]) }}" method="POST">
@@ -78,4 +74,4 @@
  @endforeach
  </table>
  {{ $mahasiswa->links() }}
-@endsection 
+@endsection
