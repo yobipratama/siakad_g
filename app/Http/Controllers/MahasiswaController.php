@@ -4,7 +4,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Mahasiswa;
 use App\Models\Kelas;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Mahasiswa_MataKuliah;
+use PDF;
 
 class MahasiswaController extends Controller
 {
@@ -50,16 +52,23 @@ class MahasiswaController extends Controller
         'Nim' => 'required',
         'Nama' => 'required',
         'Kelas' => 'required',
-        'Jurusan' => 'required'
+        'Jurusan' => 'required',
+        'userfile' => 'required'
     ]);
 
-    $mahasiswa = new Mahasiswa;
-    $mahasiswa->nim = $request->get('Nim');
-    $mahasiswa->nama = $request->get('Nama');
-    $mahasiswa->jurusan = $request->get('Jurusan');
-    $mahasiswa->alamat = '';
-    $mahasiswa->tanggal_lahir = '';
-    $mahasiswa->save();
+    if($request->file('userfile')){
+        $image_name = $request->file('userfile')->store('image', 'public');
+    }
+    
+        $mahasiswa = new Mahasiswa;
+        $mahasiswa->nim = $request->get('Nim');
+        $mahasiswa->nama = $request->get('Nama'); 
+        $mahasiswa->jurusan = $request->get('Jurusan');
+        $mahasiswa->featured_image = $image_name;
+        $mahasiswa->email = '';
+        $mahasiswa->tgl_lahir = '';
+        $mahasiswa->alamat = '';
+        $mahasiswa->save();
 
     $kelas = new Kelas;
     $kelas->id = $request->get('Kelas');
@@ -90,19 +99,30 @@ $kelas = Kelas::all();
  }
  public function update(Request $request, $nim)
  {
+    
+    //ddd($request);
     //melakukan validasi data
     $request->validate([
     'Nim' => 'required',
     'Nama' => 'required',
     'Kelas' => 'required',
     'Jurusan' => 'required',
+    'userfile' => 'required'
     ]);
     $mahasiswa = Mahasiswa::with('kelas')->where('nim', $nim)->first();
     $mahasiswa->nim = $request->get('Nim');
     $mahasiswa->nama = $request->get('Nama');
     $mahasiswa->jurusan = $request->get('Jurusan');
+    
+    if($mahasiswa->featured_image && file_exists(storage_path('./app/public/'. $mahasiswa->featured_image))){
+        Storage::delete(['./public/', $mahasiswa->featured_image]);
+    }
+    
+    $image_name = $request->file('userfile')->store('image', 'public');
+    $mahasiswa->featured_image = $image_name;
+    $mahasiswa->email = '';
+    $mahasiswa->tgl_lahir = '';
     $mahasiswa->alamat = '';
-    $mahasiswa->tanggal_lahir = '';
     $mahasiswa->save();
 
     $kelas = new Kelas;
@@ -131,8 +151,17 @@ public function destroy( $nim)
                                    ->with('mahasiswa')
                                    ->get();
     $nilai->mahasiswa = Mahasiswa::with('kelas')->where('nim', $nim)->first();
-    // dd($nilai);
     
     return view('mahasiswa.khs', compact('nilai'));
+}
+public function cetak_pdf($nim){
+    $mhs = Mahasiswa::where('nim', $nim)->first();
+    $nilai = Mahasiswa_MataKuliah::where('mahasiswa_id', $mhs->id_mahasiswa)
+                                   ->with('matakuliah')
+                                   ->with('mahasiswa')
+                                   ->get();
+    $nilai->mahasiswa = Mahasiswa::with('kelas')->where('nim', $nim)->first();
+    $pdf = PDF::loadview('mahasiswa.mahasiswa_pdf', compact('nilai'));
+    return $pdf->stream();
 }
 };
