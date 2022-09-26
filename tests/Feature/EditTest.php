@@ -20,7 +20,7 @@ class EditTest extends TestCase
         $response = $this->get('/mahasiswa/$nim/edit');
 
         //assert
-        $response->assertStatus(500);
+        $response->assertStatus(200);
         $response->assertSeeText('Kelas');
     }
 }

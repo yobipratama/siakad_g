@@ -16,7 +16,7 @@ class KhsTest extends TestCase
     {
         $response = $this->get('/mahasiswa/nilai/$nim/pdf');
 
-        $response->assertStatus(500);
+        $response->assertStatus(200);
 
         $response->assertSeeText('Mata-Kuliah');
     }

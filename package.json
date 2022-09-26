@@ -11,6 +11,8 @@
     },
     "devDependencies": {
         "axios": "^0.21",
+        "cypress": "^10.8.0",
+        "cypress-file-upload": "^5.0.8",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"

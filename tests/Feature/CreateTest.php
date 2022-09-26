@@ -16,8 +16,8 @@ class CreateTest extends TestCase
     {
         $response = $this->get('/mahasiswa/create');
 
-        $response->assertStatus(500);
+        $response->assertStatus(200);
 
-        $response->assertSeeText('Prodi');
+        $response->assertSeeText('Jurusan');
     }
 }

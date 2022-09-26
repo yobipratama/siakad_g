@@ -16,7 +16,7 @@ class DetailTest extends TestCase
     {
         $response = $this->get('/mahasiswa/$nim');
 
-        $response->assertStatus(500);
+        $response->assertStatus(200);
 
         $response->assertSeeText('Foto');
     }

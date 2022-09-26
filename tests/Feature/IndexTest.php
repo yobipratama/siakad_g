@@ -16,6 +16,6 @@ class IndexTest extends TestCase
     {
         $response = $this->get('/mahasiswa');
 
-        $response->assertStatus(500);
+        $response->assertStatus(200);
     }
 }
