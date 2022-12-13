@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gustayo",
+  "private_key_id": "a7f7d10db32bcdf7fe510fa506485f796c14ff8e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCn8WhwiM7VDmkk\nFuQ8AM7zZxdyONQLlKijKpi1F9VmV5MjtMVaX8zmMxLPIonLlL3QJsUPjruDxRl7\njKBb+igOQZ1C6WxWFA/9JlAoq1aR3rM85QIA+LRL8FlIt9ikUXq8d8liIwxvxlfp\nBC8RGRlNphzTUWWDK6ueq5VJFGxn2qzGea2ZZUKaxywc2PJ8TU+g3q5Yk1xw2ggO\nuSBfyPfcd8CHxetfSVOZ4fTDlhw1vWGSTqiIS3SxRGXfIg5y5F7lYZXf/dLVngQ9\nKKV1F1XqZIRs+azoRzFARDhxiKwDv9/CCl4uh++paxBt2VrL7F47t4zwh/uuNPDz\nJIxQQ1CHAgMBAAECggEAM93Kc3bM6d/ZeNvZAO7++w0LoKsMUcdHjZzKLKN/tGu3\ndX+Os6qCjVWYqX/xLn5xYKeYlIVwQ/HLPOzhWYaYeE6rUs7kNnFbvsLmXqkLw2ET\n2eqgA8zLYeiIqnyc26KOVUZpW3WXka2f2McCAjXOKrzyihDJWQlTp102batxD2Fo\nZup5tLFl6IpvVRP8e8WR1oLqsouOTW3R7oU9WzFUFgd3BTJJQhLuKQMXio74Ijqv\nYalFVqCeBUyMxRgkzV7s5wgvANxCiarDp1a0V6eepCrbF14qWkzBlXn2YaQJA0Rq\n4cJmgNrNFRky6Pz3XIUH8TjNn82o+eibizwGEOYXAQKBgQDswMrPHsa44WpzgJeL\nRB2tkfsCmAm09TyBOZbXlbmAK3xcwD8cG6ox2tRZCIZ+ll4QcikcSLZetzU9aBuf\nUknCmuPrYmgGfk9kQXeYdDudDs4FlBhUnRg3OuTkL0AC+l4OKq9QuB6M3Le+yV6x\nD9cHXT5C01z8RbxDlAnzSQMcDwKBgQC1mJGEbyVivjb6/pDqW/rYJBQFvQSvds62\nCAp05pyHleukYM53/KMtIWPPxRjkCF4VEUOc2Bhdvm2jsDvv9+FPhE4IRs1oS2a9\ntIc26j5mV+0esUz8G4lJUohCtU0uGtGNHIzvEM39nXfsOgiFY+UeVArPKmG6tVpA\npj4y3p9sCQKBgHmw5w3rDc3934+a60okKvUKcfD1YRfobb8mcMhDJ2Qf9f5eupGi\nDqsthbR101vBwnvFkif9n++zT+ROXNRZoZwrrTdSD5I23mvz0ptEM1gZQgBQDOmB\nDe9lkD1RpB9jvXCetBpTaTCSSsgADXIJaEdawCPtLIBm/8vkjfDE+Jo1AoGAbUrU\nkaMfGg2nI2qgpxwSnZEhJ876Cex0PmQafv7oSEX3m2fT+6zmPFwzKTHTaDKNBRrt\n2XDJQWpBrFl9yVAjn2reV+bc6x8uR5BmLKvQQGI8yNMmpTihaKqubY+WUuA7LDV5\nsMwpXbEvItJOnJFhrN4h30r/pJJPLkefeZg41JkCgYBeDDBfg5Rgb4XESatDGY+6\nlChMypYH/KACCHKQctcNQipdO935NZUS2l+blfLgmIl3bKD/zHbwl6jveWkBRt8D\n+QjeAF+jGTbvWY0O+YiQrYTCoQxqs0Z0OkdAYUfXcQ33D/2PL8kKB5WllCHUdVl+\nKz7O40QoBg272EUYM7ucrA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "laravel-gustayo@gustayo.iam.gserviceaccount.com",
+  "client_id": "104723956429078580341",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/laravel-gustayo%40gustayo.iam.gserviceaccount.com"
+}
