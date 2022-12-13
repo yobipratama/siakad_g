@@ -1,0 +1,4 @@
+$
+docker build \
+    -t gcr.io/gustayo/github.com/gustaaa/siakad:$COMMIT_SHA \
+    .
