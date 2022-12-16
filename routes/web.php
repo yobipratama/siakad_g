@@ -5,19 +5,12 @@ use App\Http\Controllers\MahasiswaController;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
-
 Route::get('/config', function () {
     Artisan::call(
-        'migrate:fresh',
-        [
-            '--force' => true
-        ]
+        'migrate:fresh'
     );
     Artisan::call(
-        'db:seed',
-        [
-            '--force' => true
-        ]
+        'db:seed'
     );
 });
 
